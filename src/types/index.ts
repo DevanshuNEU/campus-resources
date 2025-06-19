@@ -1,3 +1,5 @@
+import { ComponentType } from 'react'
+
 /**
  * Represents a campus resource with essential information
  */
@@ -18,7 +20,7 @@ export interface ResourceCategory {
   id: ResourceCategoryType
   name: string
   description: string
-  icon: string
+  icon: ComponentType
   color: string
   resources: Resource[]
 }
