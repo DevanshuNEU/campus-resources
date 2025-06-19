@@ -1,8 +1,23 @@
 {
   "name": "campus-resources",
+  "description": "A clean, accessible Campus Resources page built with React, TypeScript, and TailwindCSS. Helping students discover essential campus resources with an intuitive interface.",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "keywords": [
+    "campus-resources",
+    "student-portal",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "accessibility",
+    "responsive-design"
+  ],
+  "author": "Devanshu Rajesh Chicholikar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevanshuNEU/campus-resources.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
