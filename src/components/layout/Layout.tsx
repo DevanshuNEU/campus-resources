@@ -6,7 +6,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center">
           <div className="flex items-center space-x-2">
@@ -20,11 +20,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </header>
       
-      <main className="container py-8">
+      <main className="container py-8 flex-1">
         {children}
       </main>
       
-      <footer className="border-t bg-muted/50 py-6 mt-12">
+      <footer className="border-t bg-muted/50 py-6 mt-auto">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">

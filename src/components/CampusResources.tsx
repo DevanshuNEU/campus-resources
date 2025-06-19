@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
-import { ResourceCard } from './ResourceCard'
-import { resourcesData } from '../data/resources'
-import { ResourceCategoryType } from '../types'
+import React, { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { ResourceCard } from "./ResourceCard";
+import { resourcesData } from "../data/resources";
+import type { ResourceCategoryType } from "../types/index";
 
 export const CampusResources: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ResourceCategoryType>('relationships')
+  const [activeTab, setActiveTab] =
+    useState<ResourceCategoryType>("relationships");
 
   return (
     <div className="space-y-8">
@@ -15,20 +16,22 @@ export const CampusResources: React.FC = () => {
           Discover Campus Resources
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Find the support, opportunities, and communities you need to thrive during your college journey. 
-          Explore resources organized by what matters most to you.
+          Find the support, opportunities, and communities you need to thrive
+          during your college journey. Explore resources organized by what
+          matters most to you.
         </p>
       </div>
 
       {/* Resource Categories */}
-      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as ResourceCategoryType)}>
+      <Tabs
+        value={activeTab}
+        onValueChange={(value) => setActiveTab(value as ResourceCategoryType)}>
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto gap-2 bg-muted/50 p-2">
           {resourcesData.map((category) => (
             <TabsTrigger
               key={category.id}
               value={category.id}
-              className="flex flex-col items-center gap-2 h-auto py-3 px-2 text-xs font-medium data-[state=active]:bg-background data-[state=active]:shadow-sm"
-            >
+              className="flex flex-col items-center gap-2 h-auto py-3 px-2 text-xs font-medium data-[state=active]:bg-background data-[state=active]:shadow-sm">
               <span className="text-lg">{category.icon}</span>
               <span className="text-center leading-tight">{category.name}</span>
             </TabsTrigger>
@@ -36,7 +39,10 @@ export const CampusResources: React.FC = () => {
         </TabsList>
 
         {resourcesData.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="space-y-6">
+          <TabsContent
+            key={category.id}
+            value={category.id}
+            className="space-y-6">
             {/* Category Header */}
             <div className="text-center space-y-2">
               <div className="flex items-center justify-center gap-3">
@@ -60,5 +66,5 @@ export const CampusResources: React.FC = () => {
         ))}
       </Tabs>
     </div>
-  )
-}
+  );
+};
