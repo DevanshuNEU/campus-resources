@@ -12,7 +12,8 @@ A beautifully designed, accessible campus resources directory built with React, 
 
 [✨ **Explore Live Demo**](https://campus-resources.vercel.app/) · [📖 **Quick Start**](#-quick-start) · [🤝 **Contributing**](#-contributing)
 
-![Campus Resources Dark Mode](https://github.com/DevanshuNEU/campus-resources/assets/181012910/dark-mode-preview.png)
+<img width="1799" alt="image" src="https://github.com/user-attachments/assets/fc6fa4f0-fe79-468f-aac3-638a3fa683c7" />
+
 
 *Beautiful dark mode with smooth theme transitions*
 
