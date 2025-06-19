@@ -2,9 +2,9 @@
 
 ## 🔗 Project Links
 
-- **Live Web App**: https://campus-resources-2omn94hdz-devs-projects-57ef0b7b.vercel.app
+- **Live Web App**: https://campus-resources.vercel.app/
 - **GitHub Repository**: https://github.com/DevanshuNEU/campus-resources
-- **Local Development**: `npm run dev` (runs on http://localhost:5174)
+- **Local Development**: `npm run dev` (runs on http://localhost:5173)
 
 ## 🎯 Assignment Approach
 
