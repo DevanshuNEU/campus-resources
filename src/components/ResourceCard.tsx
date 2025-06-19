@@ -67,8 +67,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
               e.stopPropagation();
               handleResourceClick();
             }}>
-            Explore{" "}
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            Take a look <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </CardContent>

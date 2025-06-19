@@ -1,5 +1,6 @@
 import React from 'react'
 import { GraduationCap, Heart } from 'lucide-react'
+import { ThemeToggle } from '../ui/theme-toggle'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -9,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container flex h-16 items-center">
+        <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
               <GraduationCap className="h-6 w-6 text-white" />
@@ -23,6 +24,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               </span>
             </div>
           </div>
+          
+          {/* Theme Toggle */}
+          <ThemeToggle />
         </div>
       </header>
       
@@ -39,7 +43,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>Built with</span>
               <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>using React & TailwindCSS</span>
+              <span>for students who are doing their best</span>
             </div>
           </div>
         </div>

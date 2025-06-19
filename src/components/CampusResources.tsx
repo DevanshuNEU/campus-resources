@@ -5,16 +5,15 @@ import { resourcesData } from "../data/resources";
 import type { ResourceCategoryType } from "../types";
 
 export const CampusResources: React.FC = () => {
-  const [activeTab, setActiveTab] =
-    useState<ResourceCategoryType>("relationships");
+  const [activeTab, setActiveTab] = useState<ResourceCategoryType>("relationships");
 
   return (
     <div className="space-y-12">
-      {/* Enhanced Hero Section */}
+      {/* Enhanced Hero Section with Empathetic Messaging */}
       <div className="relative text-center space-y-6 py-12">
         {/* Background gradient */}
         <div className="absolute inset-0 hero-gradient opacity-5 rounded-3xl"></div>
-
+        
         <div className="relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-4">
             Discover Campus{" "}
@@ -22,20 +21,14 @@ export const CampusResources: React.FC = () => {
               Resources
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
-            Find the support, opportunities, and communities you need to thrive
-            during your
-            <br className="hidden md:block" />
-            college journey. Explore resources organized by what matters most to
-            you.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+            Find campus resources organized by what matters most to you. Simple, helpful, and easy to navigate.
           </p>
         </div>
       </div>
 
       {/* Enhanced Resource Categories */}
-      <Tabs
-        value={activeTab}
-        onValueChange={(value) => setActiveTab(value as ResourceCategoryType)}>
+      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as ResourceCategoryType)}>
         {/* Enhanced Tab Navigation */}
         <div className="relative">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto gap-3 bg-muted/30 backdrop-blur-sm p-3 rounded-2xl border">
@@ -45,14 +38,12 @@ export const CampusResources: React.FC = () => {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex flex-col items-center gap-3 h-auto py-4 px-3 text-xs font-medium rounded-xl transition-all duration-300 data-[state=active]:bg-background data-[state=active]:shadow-lg data-[state=active]:scale-105">
-                  <div
-                    className={`p-2 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
+                  className="flex flex-col items-center gap-3 h-auto py-4 px-3 text-xs font-medium rounded-xl transition-all duration-300 data-[state=active]:bg-background data-[state=active]:shadow-lg data-[state=active]:scale-105"
+                >
+                  <div className={`p-2 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
                     <IconComponent />
                   </div>
-                  <span className="text-center leading-tight font-medium">
-                    {category.name}
-                  </span>
+                  <span className="text-center leading-tight font-medium">{category.name}</span>
                 </TabsTrigger>
               );
             })}
@@ -63,15 +54,11 @@ export const CampusResources: React.FC = () => {
         {resourcesData.map((category) => {
           const IconComponent = category.icon;
           return (
-            <TabsContent
-              key={category.id}
-              value={category.id}
-              className="space-y-8 mt-8">
+            <TabsContent key={category.id} value={category.id} className="space-y-8 mt-8">
               {/* Enhanced Category Header */}
               <div className="text-center space-y-4">
                 <div className="flex items-center justify-center gap-4">
-                  <div
-                    className={`p-4 rounded-2xl bg-gradient-to-br ${category.color} text-white shadow-lg animate-float`}>
+                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${category.color} text-white shadow-lg animate-float`}>
                     <IconComponent />
                   </div>
                   <div className="text-left">
@@ -91,7 +78,8 @@ export const CampusResources: React.FC = () => {
                   <div
                     key={resource.id}
                     className="animate-in slide-in-from-bottom-4 duration-700"
-                    style={{ animationDelay: `${index * 100}ms` }}>
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
                     <ResourceCard resource={resource} />
                   </div>
                 ))}
