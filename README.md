@@ -7,6 +7,8 @@ A clean, accessible Campus Resources page built with React, TypeScript, and Tail
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1+-blue)
 
+🌐 **[LIVE DEMO](https://campus-resources-2omn94hdz-devs-projects-57ef0b7b.vercel.app)** | 📂 **[Source Code](https://github.com/DevanshuNEU/campus-resources)**
+
 ## ✨ Features
 
 - **6 Resource Categories**: Relationships, Career Development, Financial Aid, Health & Wellness, Identity & Belonging, Academic Success
@@ -176,4 +178,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ for student success** | [Live Demo](https://campus-resources-demo.vercel.app) | [Report Bug](https://github.com/DevanshuNEU/campus-resources/issues)
+**Built with ❤️ for student success** | [Live Demo](https://campus-resources-2omn94hdz-devs-projects-57ef0b7b.vercel.app) | [Report Bug](https://github.com/DevanshuNEU/campus-resources/issues)
